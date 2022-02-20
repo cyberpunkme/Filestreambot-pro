@@ -47,7 +47,7 @@ async def login_handler(c: Client, m: Message):
 async def private_receive_handler(c: Client, m: Message):
     check_pass = await pass_db.get_user_pass(m.chat.id)
     if check_pass== None:
-        await m.reply_text("Login first using /login cmd \n don\'t know the pass? request it from @adarshgoelz")
+        await m.reply_text("Login first using /login cmd \n don't know the pass? Ask @cpunkusergexbot")
         return
     if check_pass != MY_PASS:
         await pass_db.delete_user(m.chat.id)
@@ -141,10 +141,8 @@ async def private_receive_handler(c: Client, m: Message):
             text=msg_text.format(file_name, file_size, online_link, stream_link),
             parse_mode="HTML", 
             quote=True,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
-        )
+            disable_web_page_preview=True
+            
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
         await asyncio.sleep(e.x)
