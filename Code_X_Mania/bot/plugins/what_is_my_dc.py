@@ -11,4 +11,4 @@ async def start(bot, update):
         quote=True
     )
 
-START_TEXT = """ Your Telegram DC Is : `{}`  """
+START_TEXT = """ Your Telegram DataCenter Is : `{}`  """
