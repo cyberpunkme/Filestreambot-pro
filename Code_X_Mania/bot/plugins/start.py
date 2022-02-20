@@ -17,7 +17,7 @@ from pyrogram.types import ReplyKeyboardMarkup
 buttonz=ReplyKeyboardMarkup(
             [
                 ["start⚡️","help📚","login🔑","dc"],
-                ["follow❤️","ping📡","status📊","maintainers😎"]
+                ["movie group❤️","ping📡","status📊","maintainers😎"]
                         
             ],
             resize_keyboard=True
@@ -48,19 +48,19 @@ async def follow_user(b,m):
                     disable_web_page_preview=True)
             
          
-@StreamBot.on_message(filters.regex("follow❤️"))
+@StreamBot.on_message(filters.regex("movie group❤️"))
 async def follow_user(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<B>HERE'S THE FOLLOW LINK</B>",
+                    text="<B>HERE'S THE MOVIE GROUP LINK</B>",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("FOLLOW ME", url=f"https://GITHUB.COM/CODE-X-MANIA")
+                                InlineKeyboardButton("JOIN GROUP", url=f"https://telegram.dog/cinegramam")
                             ]
                         ]
                     ),
