@@ -35,12 +35,12 @@ async def follow_user(b,m):
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="I am Coded By [Adarsh Goel](https://github.com/code-x-mania)",
+                    text="I am [CP LINK GEN](https://t.me/CPLinkGenBot)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Developer💻", url=f"https://t.me/adarsh_goel")
+                                InlineKeyboardButton("OWNER💻", url=f"https://t.me/cyber_punk_me")
                             ]
                         ]
                     ),
@@ -208,13 +208,6 @@ Send me any file and get a direct download link and streamable link.!""",
 <b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>
 """
 
-        await m.reply_text(
-            text=msg_text.format(file_name, file_size, online_link, stream_link),
-            parse_mode="HTML",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
-        )
-
 
 @StreamBot.on_message(filters.regex('help📚') & filters.private & ~filters.edited)
 async def help_handler(bot, message):
@@ -264,8 +257,8 @@ async def help_handler(bot, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ DEV", url="https://t.me/codexmania")],
-                [InlineKeyboardButton("💥 FOLLOW", url="https://GitHub.com/code-x-mania")]
-            ]
-        )
-    )
+                [InlineKeyboardButton("💁‍♂️ DEV", url="https://t.me/cyber_punk_me")]
+             
+            
+        
+    
